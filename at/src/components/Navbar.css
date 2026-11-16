@@ -1,0 +1,48 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 45px;
+  margin: 20px;
+  background: #14243A;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.navbar h2 {
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #D4AF6A;
+}
+
+.student {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  background: #D4AF6A;
+  color: #14243A;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
