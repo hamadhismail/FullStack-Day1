@@ -5,10 +5,10 @@
   align-items: center;
   padding: 22px 45px;
   margin: 20px;
-  background: #14243A;
+  background: #010509;
   color: white;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 20px rgba(197, 191, 12, 0.08);
 }
 
 .navbar h2 {
@@ -28,7 +28,7 @@
 }
 
 .navbar a:hover {
-  color: #D4AF6A;
+  color: #d3d3d3;
 }
 
 .student {
