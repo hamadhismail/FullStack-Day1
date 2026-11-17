@@ -1,29 +1,51 @@
-
-.card {
+.student-card {
   background: #ffffff;
-  width: 320px;
   padding: 30px;
-  border-radius: 12px;
-  border: 1px solid #E1E6ED;
-  border-top: 4px solid #C9A45C;
+  border: 1px solid #e5eaf1;
+  border-top: 4px solid #d4af6a;
+  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(20, 36, 58, 0.06);
-  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(20, 36, 58, 0.07);
+  transition: 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(20, 36, 58, 0.12);
+.student-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(212, 175, 106, 0.2);
 }
 
-.card h2 {
-  color: #14243A;
+.student-avatar {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #14243a;
+  color: #d4af6a;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.student-card h2 {
+  color: #14243a;
   font-size: 22px;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 }
 
-.card p {
-  color: #64748B;
-  font-size: 16px;
-  margin: 16px 0;
+.student-card p {
+  color: #64748b;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.student-status {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  background: #e8f5ed;
+  color: #237747;
+  font-size: 12px;
+  font-weight: 600;
 }

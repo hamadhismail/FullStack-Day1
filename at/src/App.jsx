@@ -1,21 +1,23 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import Card from "./Components/Card";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
 import "./App.css";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
 
-      <h1>Student Dashboard</h1>
-
-      <div className="card-container">
-        <Card name="Hamadh" dept="CSE" year="3nd Year" />
-        <Card name="Ahmed" dept="IT" year="2rd Year" />
-        <Card name="Ali" dept="ECE" year="1st Year" />
-      </div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

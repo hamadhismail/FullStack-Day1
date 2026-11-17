@@ -1,48 +1,45 @@
-
+/* Gold Glowing Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 45px;
-  margin: 20px;
-  background: #010509;
-  color: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(197, 191, 12, 0.08);
+  border: 1px solid #d4af6a;
+  animation: goldGlow 3s ease-in-out infinite alternate;
 }
 
+@keyframes goldGlow {
+  from {
+    box-shadow:
+      0 0 5px rgba(212, 175, 106, 0.3),
+      0 0 10px rgba(212, 175, 106, 0.2);
+    border-color: #d4af6a;
+  }
+
+  to {
+    box-shadow:
+      0 0 10px rgba(212, 175, 106, 0.7),
+      0 0 25px rgba(212, 175, 106, 0.5),
+      0 0 40px rgba(212, 175, 106, 0.25);
+    border-color: #e6c27a;
+  }
+}
+
+/* Gold title glow */
 .navbar h2 {
-  color: white;
+  animation: goldTextGlow 2s ease-in-out infinite alternate;
 }
 
-.navbar ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
+@keyframes goldTextGlow {
+  from {
+    text-shadow: 0 0 3px rgba(212, 175, 106, 0.3);
+  }
+
+  to {
+    text-shadow:
+      0 0 8px rgba(212, 175, 106, 0.8),
+      0 0 15px rgba(212, 175, 106, 0.5);
+  }
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  color: #d3d3d3;
-}
-
-.student {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.avatar {
-  background: #D4AF6A;
-  color: #14243A;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
+/* Gold navigation hover */
+.nav-links a:hover {
+  color: #d4af6a;
+  text-shadow: 0 0 10px rgba(212, 175, 106, 0.8);
 }

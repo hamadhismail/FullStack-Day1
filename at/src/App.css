@@ -1,57 +1,358 @@
 
-h1 {
-  text-align: center;
-  font-size: 36px;
-  color: #14243A;
-  margin: 35px 0;
+/* =========================
+   1. GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fa;
+  color: #14243a;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* =========================
+   2. NAVBAR
+========================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #14243a;
+  color: #ffffff;
+  padding: 22px 45px;
+  margin: 12px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(20, 36, 58, 0.12);
+}
+
+.navbar h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4af6a;
+}
+
+/* =========================
+   3. HOME PAGE
+========================= */
+
+.home {
+  max-width: 1500px;
+  margin: auto;
+  padding: 35px 45px;
+}
+
+.welcome {
+  background: #14243a;
+  color: #ffffff;
+  padding: 55px 45px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+}
+
+.welcome p {
+  color: #d4af6a;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.welcome h1 {
+  color: #ffffff;
+  font-size: 36px;
+  margin: 16px 0;
+}
+
+.welcome span {
+  color: #dce3ed;
+  font-size: 15px;
+}
+
+/* =========================
+   4. DASHBOARD
+========================= */
+
+.dashboard-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 28px;
+  border: 1px solid #e5eaf1;
+  border-left: 4px solid #d4af6a;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(20, 36, 58, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+.info-card h3 {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.info-card h2 {
+  color: #14243a;
+  font-size: 28px;
+  margin-top: 12px;
+}
+
+.section-title {
+  color: #14243a;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   5. STUDENT CARDS
+========================= */
 
 .card-container {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
-  padding: 20px;
+  margin-top: 25px;
 }
 
-@media (max-width: 768px) {
+.student-card {
+  background: #ffffff;
+  padding: 30px;
+  border: 1px solid #e5eaf1;
+  border-top: 4px solid #d4af6a;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(20, 36, 58, 0.07);
+  transition: all 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-6px);
+  border-color: #d4af6a;
+  box-shadow: 0 10px 25px rgba(212, 175, 106, 0.2);
+}
+
+.student-avatar {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #14243a;
+  color: #d4af6a;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.student-card h2 {
+  color: #14243a;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.student-card p {
+  color: #64748b;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.student-card strong {
+  color: #14243a;
+}
+
+.student-status {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  background: #e8f5ed;
+  color: #237747;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   6. ABOUT PAGE
+========================= */
+
+.page {
+  max-width: 1100px;
+  min-height: 380px;
+  margin: 55px auto;
+  padding: 50px;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(20, 36, 58, 0.06);
+}
+
+.page h1 {
+  color: #14243a;
+  font-size: 34px;
+  margin-bottom: 22px;
+}
+
+.page h1::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 4px;
+  margin-top: 14px;
+  background: #d4af6a;
+  border-radius: 5px;
+}
+
+.page p {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.about-content {
+  max-width: 850px;
+}
+
+.about-content h2 {
+  color: #14243a;
+  font-size: 21px;
+  margin: 25px 0 12px;
+}
+
+/* =========================
+   7. CONTACT PAGE
+========================= */
+
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  padding: 25px;
+  background: #f8fafc;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: #d4af6a;
+  transform: translateY(-4px);
+}
+
+.contact-card h3 {
+  color: #14243a;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  color: #64748b;
+  font-size: 15px;
+  margin: 0;
+}
+
+.contact-card a {
+  color: #14243a;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: #b58b42;
+}
+
+/* =========================
+   8. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+  .card-container,
+  .dashboard-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page {
+    margin: 35px 20px;
+  }
+}
+
+@media (max-width: 600px) {
   .navbar {
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    gap: 18px;
     padding: 20px;
   }
 
-  .navbar ul {
-    gap: 15px;
-    flex-wrap: wrap;
+  .nav-links {
+    gap: 20px;
   }
 
-  .card {
-    width: 100%;
-    max-width: 350px;
+  .home {
+    padding: 20px;
   }
-}
 
-h1 {
-  text-align: center;
-  color: #14243A;
-  margin: 35px;
-  font-size: 36px;
-}
+  .welcome {
+    padding: 30px 22px;
+  }
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 25px;
-  flex-wrap: wrap;
-  padding: 20px;
-}
+  .welcome h1 {
+    font-size: 27px;
+  }
 
-@media (max-width: 768px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
+  .dashboard-info,
+  .card-container,
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    min-height: 300px;
+    margin: 25px 15px;
+    padding: 28px 22px;
+  }
+
+  .page h1 {
+    font-size: 27px;
+  }
+
+  .page p {
+    font-size: 14px;
   }
 }

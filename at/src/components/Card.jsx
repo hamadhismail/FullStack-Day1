@@ -1,13 +1,19 @@
 import "./Card.css";
 
-function Card({ name, dept, year }) {
+function Card(props) {
   return (
-    <div className="card">
-      <h2>Student Details</h2>
+    <div className="student-card">
+      <div className="student-avatar">
+        {props.name.charAt(0).toUpperCase()}
+      </div>
 
-      <p>Name: {name}</p>
-      <p>Department: {dept}</p>
-      <p>Year: {year}</p>
+      <h2>{props.name}</h2>
+      <p>Department: <strong>{props.dept}</strong></p>
+      <p>Year: <strong>{props.year}</strong></p>
+
+      <span className="student-status">
+        Active Student
+      </span>
     </div>
   );
 }
