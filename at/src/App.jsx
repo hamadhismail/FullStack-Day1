@@ -11,8 +11,8 @@ function App() {
       <h1>Student Dashboard</h1>
 
       <div className="card-container">
-        <Card name="Hamadh" dept="CSE" year="2nd Year" />
-        <Card name="Ahmed" dept="IT" year="3rd Year" />
+        <Card name="Hamadh" dept="CSE" year="3nd Year" />
+        <Card name="Ahmed" dept="IT" year="2rd Year" />
         <Card name="Ali" dept="ECE" year="1st Year" />
       </div>
     </div>
