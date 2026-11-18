@@ -1,0 +1,197 @@
+.student-form-container {
+  width: 400px;
+  max-width: 90%;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e5e7eb;
+}
+
+.student-form-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #14253d;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.student-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.student-form-container label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.student-form-container input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.student-form-container input:focus {
+  border-color: #d4af6a;
+  box-shadow: 0 0 5px rgba(212, 175, 106, 0.3);
+}
+
+.student-form-container form button {
+  margin-top: 10px;
+  padding: 13px;
+  background: #14253d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.student-form-container form button:hover {
+  background: #d4af6a;
+  color: #14253d;
+}
+
+/* Popup background overlay */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* Popup box */
+
+.success-popup {
+  background: white;
+  width: 400px;
+  max-width: 100%;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: popupAnimation 0.3s ease;
+}
+
+@keyframes popupAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Success icon */
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  background: #dcfce7;
+  color: #16a34a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.success-popup h2 {
+  color: #14253d;
+  margin-bottom: 10px;
+}
+
+.popup-message {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* Submitted details */
+
+.submitted-details {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 5px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span {
+  color: #64748b;
+}
+
+.detail-row strong {
+  color: #14253d;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* Close button */
+
+.close-popup-btn {
+  width: 100%;
+  padding: 13px;
+  background: #14253d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-popup-btn:hover {
+  background: #d4af6a;
+  color: #14253d;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .student-form-container {
+    padding: 20px;
+  }
+
+  .success-popup {
+    padding: 22px;
+  }
+}
